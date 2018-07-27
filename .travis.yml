@@ -9,8 +9,7 @@ before_install:
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 script: 
   - xcodebuild
-  - ls build
-  - ls build/Release
+  - find build/Release/EndlessSky.app/ -type f
 deploy:
   provider: releases
   api_key:
