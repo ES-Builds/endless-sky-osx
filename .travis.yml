@@ -10,7 +10,7 @@ before_install:
 script: 
   - xcodebuild
 before_deploy:
-  - zip build/Release/EndlessSky.app/ -r9 EndlessSky-Nightly.zip
+  - zip EndlessSky-Nightly.zip -r9 build/Release/EndlessSky.app/
 deploy:
   provider: releases
   api_key:
