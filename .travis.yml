@@ -8,7 +8,7 @@ before_install:
   - git config --local user.email "mcofficer@gmx.de"
   - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 script: 
-  - xcodebuild
+  - xcodebuild -verbose
 before_deploy:
   - zip EndlessSky-Nightly.zip -r9 build/Release/EndlessSky.app/
 deploy:
