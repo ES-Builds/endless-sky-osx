@@ -15,7 +15,7 @@ script:
   - install_name_tool -change /usr/local/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib EndlessSky
   - install_name_tool -change /usr/local/opt/jpeg-turbo/lib/libturbojpeg.0.dylib @executable_path/../Frameworks/libturbojpeg.0.dylib EndlessSky
 before_deploy:
-  - cd build/Release/
+  - cd ../../../
   - zip EndlessSky-Full.zip -r9 EndlessSky.app/
 deploy:
   provider: releases
