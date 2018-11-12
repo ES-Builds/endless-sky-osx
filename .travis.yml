@@ -2,7 +2,6 @@ os: osx
 language: c++
 before_install:
   - brew update
-  - brew cask uninstall oclint
   - brew bundle
   - brew uninstall libjpeg --ignore-dependencies
   - git config --local user.name "MCOfficer"
