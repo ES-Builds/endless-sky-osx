@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 os: osx
 language: c++
 before_install:
@@ -39,23 +38,3 @@ after_failure:
   - wget https://raw.githubusercontent.com/k3rn31p4nic/travis-ci-discord-webhook/master/send.sh
   - chmod +x send.sh
   - ./send.sh failure $WEBHOOK_URL
-=======
-language: cpp
-dist: trusty
-sudo: required
-
-before_install:
-    - sudo apt-get -qq update
-    - sudo apt-get install -y libsdl2-dev libpng12-dev libjpeg-turbo8-dev libglew-dev libopenal-dev libgl1-mesa-dev libmad0-dev libegl1-mesa-dev libgles2-mesa-dev
-
-env:
-    - es_run_mode=
-    - es_run_mode=mode=debug
-
-script: "scons -j2 $es_run_mode"
-
-notifications:
-    email:
-        on_success: never
-        on_failure: change
->>>>>>> 9c900de7e053ab34f1e72d2480ede8f46c024142
