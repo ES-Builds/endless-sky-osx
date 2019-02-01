@@ -11,12 +11,12 @@ before_install:
 script: 
   - xcodebuild
   - cd build/Release/Endless\ Sky.app/Contents/MacOS/
-  - install_name_tool -change /usr/local/opt/libpng/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib EndlessSky
-  - install_name_tool -change /usr/local/opt/mad/lib/libmad.0.2.1.dylib @executable_path/../Frameworks/libmad.0.2.1.dylib EndlessSky
-  - install_name_tool -change /usr/local/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib EndlessSky
-  - install_name_tool -change /usr/local/opt/jpeg-turbo/lib/libturbojpeg.0.dylib @executable_path/../Frameworks/libturbojpeg.0.dylib EndlessSky
+  - install_name_tool -change /usr/local/opt/libpng/lib/libpng16.16.dylib @executable_path/../Frameworks/libpng16.16.dylib Endless\ Sky
+  - install_name_tool -change /usr/local/opt/mad/lib/libmad.0.2.1.dylib @executable_path/../Frameworks/libmad.0.2.1.dylib Endless\ Sky
+  - install_name_tool -change /usr/local/opt/sdl2/lib/libSDL2-2.0.0.dylib @executable_path/../Frameworks/libSDL2-2.0.0.dylib Endless\ Sky
+  - install_name_tool -change /usr/local/opt/jpeg-turbo/lib/libturbojpeg.0.dylib @executable_path/../Frameworks/libturbojpeg.0.dylib Endless\ Sky
 before_deploy:
-  - zip EndlessSky-Nightly-Binary.zip -9 EndlessSky
+  - zip EndlessSky-Nightly-Binary.zip -9 Endless\ Sky
   - cd ../../../
   - zip EndlessSky-Nightly-Full.zip -r9 Endless\ Sky.app/
 deploy:
