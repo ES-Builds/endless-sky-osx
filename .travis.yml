@@ -2,7 +2,7 @@ os: osx
 language: c++
 before_install:
   - brew update
-  - brew bundle
+  - travis_wait brew bundle
   - brew uninstall libjpeg --ignore-dependencies # wrong libjpeg version can cause us problems
   - sed -i -- 's/Cellar\/sdl2\/2.0.8\//Cellar\/sdl2\/2.0.9\//g' EndlessSky.xcodeproj/project.pbxproj # Fix SDL2 path (brew supplies 2.0.9, ES by default looks for 2.0.8)
   - git config --local user.name "MCOfficer"
